@@ -71,3 +71,16 @@ console.log('My users Array and my questions arrray are ...');
     console.log(current);
   });
 
+  // see: http://stackoverflow.com/questions/9639167/passing-console-log-as-a-parameter-to-foreach-doesnt-work
+  // We can't do the following and expect just the objects to be logged
+  // this is because the forEach function is passing three arguments to console.log:
+  // the current element in the array
+  // the array index
+  // the entire array
+  //
+  // So - what we get with the below code is, for each element of the array,
+  // the following logged to the console:
+  // The current element, the array index of the current element, the entire array.
+  // Yuck! Just use the above code.
+  //var c = console.log.bind(console);
+  //users.forEach(c);
