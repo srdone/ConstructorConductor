@@ -47,14 +47,14 @@
 var q1title = 'T/F: Inheritance is achieved in JavaScript through Prototypes?';
 var q2title = 'T/F: JavaScript is just a scripting version of Java';
 var q3title = "T/F: In Javascript, == doesn't check 'type' but just the value - where === checks type and value";
-var tfarr = ["true", "false"];
+var tfarr = ["true", "false"]; // note that this can causes issues if we ever want to update this for only one question, as the objects are storing a reference to this. not a clopy
+// we can fix the issue by calling tfarr.slice(0) when we pass it to the constructor
 //Fill in the rest of the required data as you see appropriate.
 
   //code here
   questions.push(new Question(q1title, tfarr, "true", "medium"));
   questions.push(new Question(q2title, tfarr, "false", "easy"));
   questions.push(new Question(q3title, tfarr, "true", "medium"));
-
 
 //Now push all of your instances of Question into the questions Array
 
